@@ -1,14 +1,24 @@
 services:
-  - type: worker
-    name: telegram-music-bot
+  - type: web
+    name: frozen-music-bot
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
     envVars:
-      - key: API_ID
-        value: "your_api_id"
       - key: API_HASH
-        value: "your_api_hash"
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: ASSISTANT_SESSION
+        sync: false
       - key: BOT_TOKEN
-        value: "your_bot_token"
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: MongoDB_url
+        sync: false
+      - key: UPDATES_CHANNEL
+        sync: false
+      - key: SUPPORT_GROUP
+        sync: false
