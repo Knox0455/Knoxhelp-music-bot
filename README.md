@@ -27,7 +27,7 @@
    ```
 7. **Create .env  with sample.env**
    ```bash
-   cp frozen.env .env
+   cp knox.env .env
    ```
    - Edit .env with your vars
 8. **Editing Vars:**
